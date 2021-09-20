@@ -1,0 +1,53 @@
+.Crypto {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0px;
+
+  &__search {
+    margin-bottom: 30px;
+
+    input {
+      width: 300px;
+      padding: 10px;
+      border-radius: 5px;
+      outline-color: #4361ee;
+      border: 1px solid #4361ee;
+    }
+  }
+
+  .Currencies__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    &--card {
+      padding: 1rem;
+      border-radius: 5px;
+      background-color: rgba($color: #4361ee, $alpha: 0.2);
+      box-shadow: 0px 10px 13px -7px #000000,
+        -1px 11px 3px -5px rgba(0, 0, 0, 0.2);
+
+      &--link {
+        text-decoration: none;
+        color: #4361ee;
+      }
+    }
+  }
+}
+
+.Currencies__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  &--card {
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgba($color: #4361ee, $alpha: 0.2);
+    box-shadow: 0px 10px 13px -7px #000000,
+      -1px 11px 3px -5px rgba(0, 0, 0, 0.2);
+
+    &--link {
+      text-decoration: none;
+      color: #4361ee;
+    }
+  }
+}
