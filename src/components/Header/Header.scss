@@ -1,0 +1,43 @@
+.Header {
+  display: flex;
+  justify-content: center;
+  background-color: #4361ee;
+  height: 70px;
+  padding: 10px 0px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+
+    &--logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      transition: all 0.2s ease-in;
+
+      &--img {
+        width: 50px;
+      }
+    }
+
+    &--links {
+      display: flex;
+      margin: 1rem 0px;
+
+      .link {
+        text-decoration: none;
+        margin: 10px 1rem;
+        color: white;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+          color: #3a0ca3;
+          transition: all 0.2s ease-in;
+        }
+      }
+    }
+  }
+}

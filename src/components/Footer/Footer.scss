@@ -1,0 +1,17 @@
+.Footer {
+  background-color: #4361ee;
+  padding: 1rem;
+
+  .link {
+    text-decoration: underline;
+    color: white;
+  }
+
+  &__links {
+    text-align: center;
+
+    .link {
+      margin: 0 10px;
+    }
+  }
+}
