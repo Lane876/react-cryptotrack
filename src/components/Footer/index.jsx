@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <div className="Footer">
       <h3 style={{ color: "white", textAlign: "center" }}>
-        Copyright © 2021{" "}
+        Copyright © {new Date().getFullYear()}{" "}
         <Link to="/" className="link">
-          Cryptotrack Inc.
+          CryptoTrack Inc.
         </Link>{" "}
         <br />
         All Rights Reserved.

@@ -12,7 +12,7 @@ const Header = () => {
           <h3 style={{ marginLeft: "1rem" }}>CryptoTrack</h3>
         </Link>
         <div className="Header__container--links">
-          <Link to="/currencies" className="link">
+          <Link to="/cryptocurrencies" className="link">
             Cryptocurrencies
           </Link>
           <Link to="/exchanges" className="link">
