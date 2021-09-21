@@ -1,0 +1,139 @@
+.News {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+  &__container {
+    border: 1px solid rgb(171, 171, 171);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 10px 13px -7px #000000,
+      -1px 11px 3px -5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+
+    &--card {
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      &--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        div {
+          flex: 0.7;
+          font-weight: 700;
+        }
+
+        img {
+          border-radius: 5px;
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      &--provider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--img {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          img {
+            width: 30px;
+            height: 30px;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.NewsContainer {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+
+  .Select {
+    margin: 1rem 0px;
+
+    &__select {
+      width: 300px;
+      padding: 10px;
+      border-radius: 5px;
+      outline-color: #4361ee;
+      border: 1px solid #4361ee;
+    }
+  }
+  .SNews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+    &__container {
+      border: 1px solid rgb(171, 171, 171);
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0px 10px 13px -7px #000000,
+        -1px 11px 3px -5px rgba(0, 0, 0, 0.2);
+      background-color: white;
+
+      &--card {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        &--header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          div {
+            flex: 0.7;
+            font-weight: 700;
+          }
+
+          img {
+            border-radius: 5px;
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        &--provider {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &--img {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+              width: 30px;
+              height: 30px;
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
