@@ -1,0 +1,17 @@
+.Chart {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 25px;
+    color: #4361ee;
+  }
+
+  &__price--container {
+    display: flex;
+
+    &--price {
+      margin-right: 2rem;
+    }
+  }
+}

@@ -93,8 +93,8 @@ const CryptoDetails = () => {
 
   return (
     <div className="CoinDetail">
-      <div className="coin-heading-container">
-        <h4 className="coin-name">
+      <div className="CoinDetail__heading">
+        <h4 className="CoinDetail__heading--name">
           {data?.data?.coin.name} ({data?.data?.coin.slug}) Price
         </h4>
         <p>
@@ -104,7 +104,7 @@ const CryptoDetails = () => {
       </div>
       <select
         defaultValue="7d"
-        className="select-timeperiod"
+        className="CoinDetail__select"
         placeholder="Select Timeperiod"
         onChange={(e) => setTimeperiod(e.target.value)}
       >
@@ -117,10 +117,10 @@ const CryptoDetails = () => {
         currentPrice={millify(cryptoDetails.price)}
         coinName={cryptoDetails.name}
       />
-      <div className="stats-container">
-        <div className="coin-value-statistics">
-          <div className="coin-value-statistics-heading">
-            <h4 className="coin-details-heading">
+      <div className="CoinDetail__stats">
+        <div className="CoinDetail__stats--coin">
+          <div className="CoinDetail__stats--coin--heading">
+            <h4 className="CoinDetail__stats--coin--heading--details">
               {cryptoDetails.name} Value Statistics
             </h4>
             <p>
@@ -129,46 +129,56 @@ const CryptoDetails = () => {
             </p>
           </div>
           {stats.map(({ icon, title, value }) => (
-            <div className="coin-stats" key={value}>
-              <div className="coin-stats-name">
+            <div className="CoinDetail__stats--coin--table" key={value}>
+              <div className="CoinDetail__stats--coin--table--name">
                 <p>{icon}</p>
                 <p>{title}</p>
               </div>
-              <h4 className="stats">{value}</h4>
+              <h4 className="CoinDetail__stats--coin--table--stats">{value}</h4>
             </div>
           ))}
         </div>
-        <div className="other-stats-info">
-          <div className="coin-value-statistics-heading">
-            <h4 className="coin-details-heading">Other Stats Info</h4>
+        <div className="CoinDetail__stats--coin">
+          <div className="CoinDetail__stats--coin--heading">
+            <h4 className="CoinDetail__stats--coin--heading--details">
+              Other Stats Info
+            </h4>
             <p>
               An overview showing the statistics of {cryptoDetails.name}, such
               as the base and quote currency, the rank, and trading volume.
             </p>
           </div>
           {genericStats.map(({ icon, title, value }) => (
-            <div className="coin-stats">
-              <div className="coin-stats-name">
+            <div className="CoinDetail__stats--coin--table">
+              <div className="CoinDetail__stats--coin--table--name">
                 <p>{icon}</p>
                 <p>{title}</p>
               </div>
-              <p className="stats">{value}</p>
+              <h4 className="CoinDetail__stats--coin--table--stats">{value}</h4>
             </div>
           ))}
         </div>
       </div>
-      <div className="coin-desc-link">
-        <div className="coin-desc">
-          <h4 className="coin-details-heading">
+      <div className="CoinDetail__desc">
+        <div className="CoinDetail__desc--coin">
+          <h4 className="CoinDetail__desc--coin--heading">
             What is {cryptoDetails.name}?
           </h4>
           {HTMLReactParser(cryptoDetails.description)}
         </div>
-        <div className="coin-links">
-          <h4 className="coin-details-heading">{cryptoDetails.name} Links</h4>
-          {cryptoDetails.links?.map((link) => (
-            <div className="coin-link" key={link.name}>
-              <h4 className="link-name">{link.type}</h4>
+        <div className="CoinDetail__desc--links">
+          <h4 className="CoinDetail__desc--links--heading">
+            {cryptoDetails.name} Links
+          </h4>
+          {cryptoDetails.links?.map((link, i) => (
+            <div
+              className="CoinDetail__desc--links--link"
+              key={link.name}
+              key={i}
+            >
+              <h4 className="CoinDetail__desc--links--link--name">
+                {link.type}
+              </h4>
               <a href={link.url} target="_blank" rel="noreferrer">
                 {link.name}
               </a>

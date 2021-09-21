@@ -36,6 +36,16 @@
       &--link {
         text-decoration: none;
         color: #4361ee;
+
+        &--container {
+          &--header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(171, 171, 171);
+            padding-bottom: 5px;
+            align-items: center;
+          }
+        }
       }
     }
   }
@@ -62,6 +72,16 @@
     &--link {
       text-decoration: none;
       color: #4361ee;
+
+      &--container {
+        &--header {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid rgb(171, 171, 171);
+          padding-bottom: 5px;
+          align-items: center;
+        }
+      }
     }
   }
 }

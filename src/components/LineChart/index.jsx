@@ -1,5 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
+import "./LineChart.scss";
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
@@ -42,10 +43,12 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
 
   return (
     <>
-      <div className="chart-header">
-        <h4 className="chart-title">{coinName} Price Chart </h4>
-        <div className="price-container">
-          <h4 className="price-change">Change: {coinHistory?.data?.change}%</h4>
+      <div className="Chart">
+        <h4 className="Chart__title">{coinName} Price Chart </h4>
+        <div className="Chart__price--container">
+          <h4 className="Chart__price--container--price">
+            Change: {coinHistory?.data?.change}%
+          </h4>
           <h4 className="current-price">
             Current {coinName} Price: $ {currentPrice}
           </h4>

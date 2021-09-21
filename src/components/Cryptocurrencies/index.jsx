@@ -40,14 +40,16 @@ const Cryptocurrencies = ({ simplified }) => {
               to={`/crypto/${currency.id}`}
               className="Currencies__container--card--link"
             >
-              <div>
-                <h4>{`${currency.rank}. ${currency.name}`}</h4>
-                <img
-                  className="crypto-image"
-                  src={currency.iconUrl}
-                  alt="crypto"
-                  style={{ width: "50px" }}
-                />
+              <div className="Currencies__container--card--link--container">
+                <div className="Currencies__container--card--link--container--header">
+                  <h4>{`${currency.rank}. ${currency.name}`}</h4>
+                  <img
+                    className="crypto-image"
+                    src={currency.iconUrl}
+                    alt="crypto"
+                    style={{ width: "40px", height: "40px" }}
+                  />
+                </div>
                 <p>Price: {millify(currency.price)}</p>
                 <p>Market Cap: {millify(currency.marketCap)}</p>
                 <p>Daily Change: {currency.change}%</p>
