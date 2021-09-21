@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import millify from "millify";
 import { Link } from "react-router-dom";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
+import Loader from "../Loader";
 
 import "./Cryptocurrencies.scss";
 
@@ -21,7 +22,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
   return (
     <div className={!simplified ? "Crypto" : ""}>
       {!simplified && (

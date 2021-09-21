@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import moment from "moment";
 import { useGetCryptoNewsQuery } from "../../services/cryptoNewsApi";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
+import Loader from "../Loader";
 
 import "./News.scss";
 
@@ -15,7 +16,7 @@ const News = ({ simplified }) => {
     newsCategory,
     count: simplified ? 6 : 12,
   });
-  if (!cryptoNews?.value) return "Loading...";
+  if (!cryptoNews?.value) return <Loader />;
   return (
     <div className={!simplified ? "NewsContainer" : ""}>
       {!simplified && (
