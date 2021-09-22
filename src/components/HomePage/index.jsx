@@ -27,20 +27,16 @@ const Homepage = () => {
 
       <div className="HomePage__crypto">
         <h2 className="HomePage__heading">Top 10 Cryptos In The World</h2>
-        <h2>
-          <Link to="/cryptocurrencies" className="HomePage__heading">
-            Show more
-          </Link>
-        </h2>
+        <Link to="/cryptocurrencies" className="HomePage__heading">
+          Show more
+        </Link>
       </div>
       <Cryptocurrencies simplified />
       <div className="HomePage__crypto">
         <h2 className="HomePage__heading">Latest Crypto News</h2>
-        <h2>
-          <Link to="/news" className="HomePage__heading">
-            Show more
-          </Link>
-        </h2>
+        <Link to="/news" className="HomePage__heading">
+          Show more
+        </Link>
       </div>
       <News simplified />
     </div>

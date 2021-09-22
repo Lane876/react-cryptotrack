@@ -31,7 +31,13 @@ export const MenuItem = ({ i, toggle }) => {
     >
       <Link
         to={to[i]}
-        style={{ textDecoration: "none", color: "black", marginLeft: "3rem" }}
+        style={{
+          textDecoration: "none",
+          color: "black",
+          marginLeft: "2rem",
+          fontSize: "20px",
+          fontWeight: "700",
+        }}
         onClick={toggle}
       >
         {links[i]}

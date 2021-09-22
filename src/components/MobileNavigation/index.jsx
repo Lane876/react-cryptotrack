@@ -17,7 +17,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(30px at 250px 45px)",
+    clipPath: "circle(30px at 230px 45px)",
     transition: {
       delay: 0.1,
       type: "spring",
@@ -31,6 +31,16 @@ export const MobileNavigation = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+
+  React.useEffect(() => {
+    if (isOpen) {
+      const body = document.body;
+      body.style.overflowY = "hidden";
+    } else {
+      const body = document.body;
+      body.style.overflowY = "visible";
+    }
+  }, [isOpen]);
 
   return (
     <motion.nav
