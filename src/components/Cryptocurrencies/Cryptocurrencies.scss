@@ -7,7 +7,7 @@
     margin-bottom: 30px;
 
     input {
-      width: 300px;
+      width: 220px;
       padding: 10px;
       border-radius: 5px;
       outline-color: #4361ee;
@@ -25,6 +25,9 @@
     }
     @media (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 425px) {
+      grid-template-columns: 1fr;
     }
     &--card {
       padding: 1rem;
