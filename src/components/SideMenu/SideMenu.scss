@@ -1,0 +1,32 @@
+.Nav {
+  background-color: #4361ee;
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  &__close {
+    position: absolute;
+    top: 5%;
+    right: 14%;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0 0 4rem;
+
+    .nav-text {
+      margin-bottom: 2rem;
+      align-self: flex-start;
+      a {
+        text-decoration: none;
+        color: #f5f5f5;
+        font-size: 20px;
+      }
+    }
+  }
+}
