@@ -130,8 +130,8 @@ const CryptoDetails = () => {
               as the base and quote currency, the rank, and trading volume.
             </p>
           </div>
-          {stats.map(({ icon, title, value }) => (
-            <div className="CoinDetail__stats--coin--table" key={value}>
+          {stats.map(({ icon, title, value, i }) => (
+            <div className="CoinDetail__stats--coin--table" key={i}>
               <div className="CoinDetail__stats--coin--table--name">
                 <p>{icon}</p>
                 <p>{title}</p>
@@ -150,8 +150,8 @@ const CryptoDetails = () => {
               as the base and quote currency, the rank, and trading volume.
             </p>
           </div>
-          {genericStats.map(({ icon, title, value }) => (
-            <div className="CoinDetail__stats--coin--table" key={value}>
+          {genericStats.map(({ icon, title, value, i }) => (
+            <div className="CoinDetail__stats--coin--table" key={i}>
               <div className="CoinDetail__stats--coin--table--name">
                 <p>{icon}</p>
                 <p>{title}</p>
