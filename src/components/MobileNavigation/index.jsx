@@ -50,7 +50,7 @@ export const MobileNavigation = () => {
       ref={containerRef}
     >
       <motion.div className="background" variants={sidebar} />
-      <Navigation toggle={() => toggleOpen()} />
+      <Navigation toggle={() => toggleOpen()} isOpen={isOpen} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

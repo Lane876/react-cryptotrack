@@ -40,7 +40,9 @@ const Header = () => {
               </Link>
             </>
           ) : (
-            <MobileNavigation />
+            <div>
+              <MobileNavigation />
+            </div>
           )}
         </div>
       </div>

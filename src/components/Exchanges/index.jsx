@@ -27,12 +27,13 @@ const Exchanges = () => {
       opacity: 0,
     },
     visible: {
-      y: 0,
+      // y: 0,
       opacity: 1,
-      // transition: {
-      //   delay: 0.1,
-      //   type: "spring",
-      // },
+      transition: {
+        // delay: 0.1,
+        // type: "spring",
+        y: 0,
+      },
     },
     exit: {
       y: -20,

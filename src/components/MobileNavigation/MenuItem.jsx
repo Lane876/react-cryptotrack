@@ -22,26 +22,28 @@ const variants = {
 const links = ["Cryptocurrencies", "Exchange", "News"];
 const to = ["/cryptocurrencies", "/exchanges", "/news"];
 
-export const MenuItem = ({ i, toggle }) => {
+export const MenuItem = ({ i, toggle, isOpen }) => {
   return (
-    <motion.li
-      variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <Link
-        to={to[i]}
-        style={{
-          textDecoration: "none",
-          color: "black",
-          marginLeft: "2rem",
-          fontSize: "20px",
-          fontWeight: "700",
-        }}
-        onClick={toggle}
+    isOpen && (
+      <motion.li
+        variants={variants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
       >
-        {links[i]}
-      </Link>
-    </motion.li>
+        <Link
+          to={to[i]}
+          style={{
+            textDecoration: "none",
+            color: "black",
+            marginLeft: "2rem",
+            fontSize: "20px",
+            fontWeight: "700",
+          }}
+          onClick={toggle}
+        >
+          {links[i]}
+        </Link>
+      </motion.li>
+    )
   );
 };
