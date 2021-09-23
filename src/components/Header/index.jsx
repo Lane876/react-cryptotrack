@@ -2,17 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./Header.scss";
 import logo from "../../images/blockchain.svg";
 import { Link } from "react-router-dom";
-import { MobileNavigation } from "../MobileNavigation";
+import SideMenu from "../SideMenu";
 
 const Header = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const updateDimensions = () => {
     setWidth(window.innerWidth);
   };
-
-  useEffect(() => {
-    console.log(width);
-  }, [width]);
 
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
@@ -40,9 +36,7 @@ const Header = () => {
               </Link>
             </>
           ) : (
-            <div>
-              <MobileNavigation />
-            </div>
+            <SideMenu />
           )}
         </div>
       </div>

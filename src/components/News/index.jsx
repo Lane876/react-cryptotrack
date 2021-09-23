@@ -22,18 +22,15 @@ const News = ({ simplified }) => {
       {!simplified && (
         <div className="Select">
           <select
-            showSearch
             className="Select__select"
             placeholder="Select a Crypto"
-            optionFilterProp="children"
             onChange={(e) => setNewsCategory(e.target.value)}
-            filterOption={(input, option) =>
-              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
           >
             <option value="Cryptocurency">Cryptocurrency</option>
-            {data?.data?.coins?.map((currency) => (
-              <option value={currency.name}>{currency.name}</option>
+            {data?.data?.coins?.map((currency, i) => (
+              <option value={currency.name} key={i}>
+                {currency.name}
+              </option>
             ))}
           </select>
         </div>
@@ -67,7 +64,7 @@ const News = ({ simplified }) => {
                         news.provider[0]?.image?.thumbnail?.contentUrl ||
                         demoImage
                       }
-                      alt=""
+                      alt="demoImage"
                     />
                     <h4 className="provider-name">{news.provider[0]?.name}</h4>
                   </div>

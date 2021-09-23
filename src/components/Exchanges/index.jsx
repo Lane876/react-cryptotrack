@@ -2,7 +2,7 @@ import React from "react";
 import millify from "millify";
 import HTMLReactParser from "html-react-parser";
 import { useState } from "react";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { useGetExchangesQuery } from "../../services/cryptoApi";
 import Loader from "../Loader";
@@ -45,7 +45,7 @@ const Exchanges = () => {
     <div className="Exchanges">
       <div className="Exchanges__list">
         {exchangesList.map((exchange, i) => (
-          <div>
+          <div key={i}>
             <div
               className="Exchanges__list--card"
               key={i}
@@ -59,6 +59,7 @@ const Exchanges = () => {
                   className="exchange-image"
                   src={exchange.iconUrl}
                   style={{ width: "30px", height: "30px", marginRight: "1rem" }}
+                  alt="avatar"
                 />
                 <strong>{exchange.name}</strong>
               </div>

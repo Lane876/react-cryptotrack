@@ -110,8 +110,8 @@ const CryptoDetails = () => {
         placeholder="Select Timeperiod"
         onChange={(e) => setTimeperiod(e.target.value)}
       >
-        {time.map((date) => (
-          <option key={date}>{date}</option>
+        {time.map((date, i) => (
+          <option key={i}>{date}</option>
         ))}
       </select>
       <LineChart
@@ -151,7 +151,7 @@ const CryptoDetails = () => {
             </p>
           </div>
           {genericStats.map(({ icon, title, value }) => (
-            <div className="CoinDetail__stats--coin--table">
+            <div className="CoinDetail__stats--coin--table" key={value}>
               <div className="CoinDetail__stats--coin--table--name">
                 <p>{icon}</p>
                 <p>{title}</p>
@@ -173,11 +173,7 @@ const CryptoDetails = () => {
             {cryptoDetails.name} Links
           </h4>
           {cryptoDetails.links?.map((link, i) => (
-            <div
-              className="CoinDetail__desc--links--link"
-              key={link.name}
-              key={i}
-            >
+            <div className="CoinDetail__desc--links--link" key={i}>
               <h4 className="CoinDetail__desc--links--link--name">
                 {link.type}
               </h4>
