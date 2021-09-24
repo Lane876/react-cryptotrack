@@ -30,7 +30,7 @@ const Exchanges = () => {
               className="Exchanges__list--container--card"
               onClick={() => handleClick(i)}
             >
-              <div className="Exchanges__list--card--header">
+              <div className="Exchanges__list--container--card--header">
                 <strong style={{ marginRight: "1rem" }}>
                   {exchange.rank}.
                 </strong>

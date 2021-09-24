@@ -2,11 +2,6 @@
   width: 80%;
   margin: 0 auto;
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__list {
     margin: 2rem 0px;
 
@@ -16,6 +11,7 @@
       padding: 1rem;
       background-color: #fff;
       margin-bottom: 1px;
+      align-items: center;
 
       &--card {
         display: flex;
