@@ -20,7 +20,7 @@ const Header = () => {
       <div className="Header__container">
         <Link to="/" className="Header__container--logo">
           <img src={logo} className="Header__container--logo--img" alt="logo" />
-          <h3 style={{ marginLeft: "1rem" }}>CryptoTrack</h3>
+          <h3 style={{ marginLeft: "1rem", fontSize: "30px" }}>CryptoTrack</h3>
         </Link>
         <div className="Header__container--links">
           {width > 800 ? (

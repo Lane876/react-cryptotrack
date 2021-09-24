@@ -21,35 +21,20 @@ const Exchanges = () => {
     setIndex(i);
   };
 
-  const transitionVariant = {
-    hidden: {
-      y: -10,
-      opacity: 0,
-    },
-    visible: {
-      // y: 0,
-      opacity: 1,
-      transition: {
-        // delay: 0.1,
-        // type: "spring",
-        y: 0,
-      },
-    },
-    exit: {
-      y: -20,
-      opacity: 0,
-    },
-  };
-
   return (
     <div className="Exchanges">
       <div className="Exchanges__list">
         {exchangesList.map((exchange, i) => (
           <div key={i}>
-            <div
+            <motion.div
               className="Exchanges__list--card"
               key={i}
               onClick={() => handleClick(i)}
+              initial={false}
+              animate={{
+                backgroundColor:
+                  isOpen && i === index ? "rgb(171, 171, 171)" : "#fff",
+              }}
             >
               <div className="Exchanges__list--card--header">
                 <strong style={{ marginRight: "1rem" }}>
@@ -67,18 +52,27 @@ const Exchanges = () => {
               <div>24h Trade Volume: ${millify(exchange.volume)}</div>
               <div>Markets: {millify(exchange.numberOfMarkets)}</div>
               <div>Change: {millify(exchange.marketShare)}%</div>
-            </div>
-            <AnimatePresence>
+            </motion.div>
+            <AnimatePresence initial={false}>
               {isOpen && index === i && (
-                <motion.div
-                  variants={transitionVariant}
-                  animate="visible"
-                  initial="hidden"
-                  exit="exit"
+                <motion.section
+                  initial="collapsed"
+                  animate="open"
+                  exit="collapsed"
+                  variants={{
+                    open: { opacity: 1, height: "auto" },
+                    collapsed: { opacity: 0, height: 0 },
+                  }}
+                  transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
                   className="description"
                 >
-                  {HTMLReactParser(exchange.description || "")}
-                </motion.div>
+                  <motion.div
+                    variants={{ collapsed: { scale: 0.8 }, open: { scale: 1 } }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    {HTMLReactParser(exchange.description || "")}
+                  </motion.div>
+                </motion.section>
               )}
             </AnimatePresence>
           </div>
