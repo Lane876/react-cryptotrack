@@ -25,9 +25,9 @@ const Exchanges = () => {
     <div className="Exchanges">
       <div className="Exchanges__list">
         {exchangesList.map((exchange, i) => (
-          <motion.div key={i} className="Exchanges__list-c">
+          <motion.div key={i} className="Exchanges__list--container">
             <div
-              className="Exchanges__list--card"
+              className="Exchanges__list--container--card"
               onClick={() => handleClick(i)}
             >
               <div className="Exchanges__list--card--header">

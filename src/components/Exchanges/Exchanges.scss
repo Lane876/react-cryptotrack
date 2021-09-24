@@ -10,28 +10,28 @@
   &__list {
     margin: 2rem 0px;
 
-    &-c {
+    &--container {
       border: 1px solid rgb(171, 171, 171);
       border-radius: 5px;
       padding: 1rem;
       background-color: #fff;
       margin-bottom: 1px;
-    }
 
-    &--card {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      font-size: 14px;
-
-      div {
-        flex: 0.25;
-      }
-
-      &--header {
+      &--card {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
+        cursor: pointer;
+        font-size: 14px;
+
+        div {
+          flex: 0.25;
+        }
+
+        &--header {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+        }
       }
     }
     .description {
