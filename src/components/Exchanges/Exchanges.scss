@@ -10,20 +10,19 @@
   &__list {
     margin: 2rem 0px;
 
-    &--card {
-      border-top: 1px solid rgb(171, 171, 171);
-      border-left: 1px solid rgb(171, 171, 171);
-      border-right: 1px solid rgb(171, 171, 171);
+    &-c {
+      border: 1px solid rgb(171, 171, 171);
       border-radius: 5px;
       padding: 1rem;
+      background-color: #fff;
+      margin-bottom: 1px;
+    }
+
+    &--card {
       display: flex;
       align-items: center;
-      background-color: #fff;
       cursor: pointer;
       font-size: 14px;
-      &:last-child {
-        border-bottom: 1px solid rgb(171, 171, 171);
-      }
 
       div {
         flex: 0.25;
@@ -35,15 +34,9 @@
         flex-wrap: wrap;
       }
     }
-
     .description {
       background-color: white;
       padding: 1rem;
-      border-left: 1px solid rgb(171, 171, 171);
-      border-right: 1px solid rgb(171, 171, 171);
-      border-bottom: 1px solid rgb(171, 171, 171);
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
     }
   }
 }
