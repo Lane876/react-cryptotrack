@@ -12,11 +12,11 @@
       background-color: #fff;
       margin-bottom: 1px;
       align-items: center;
+      cursor: pointer;
 
       &--card {
         display: flex;
         align-items: center;
-        cursor: pointer;
         font-size: 14px;
 
         div {
@@ -33,6 +33,7 @@
     .description {
       background-color: white;
       padding: 1rem;
+      cursor: auto;
     }
   }
 }

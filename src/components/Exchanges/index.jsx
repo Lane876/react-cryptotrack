@@ -25,11 +25,12 @@ const Exchanges = () => {
     <div className="Exchanges">
       <div className="Exchanges__list">
         {exchangesList.map((exchange, i) => (
-          <motion.div key={i} className="Exchanges__list--container">
-            <div
-              className="Exchanges__list--container--card"
-              onClick={() => handleClick(i)}
-            >
+          <motion.div
+            key={i}
+            className="Exchanges__list--container"
+            onClick={() => handleClick(i)}
+          >
+            <div className="Exchanges__list--container--card">
               <div className="Exchanges__list--container--card--header">
                 <strong style={{ marginRight: "1rem" }}>
                   {exchange.rank}.
@@ -62,6 +63,7 @@ const Exchanges = () => {
                     ease: [0.04, 0.62, 0.23, 0.98],
                   }}
                   style={{ overflow: "hidden" }}
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <motion.div className="description">
                     {HTMLReactParser(exchange.description || "")}
