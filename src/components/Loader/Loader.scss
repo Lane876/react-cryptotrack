@@ -1,7 +1,10 @@
 @import "../../variables.scss";
 
 .Loader {
-  margin: 10% auto;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: 5px solid $hover;
   border-top: 5px solid #fff;
   border-radius: 50%;
