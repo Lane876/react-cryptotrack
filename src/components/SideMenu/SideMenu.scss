@@ -1,5 +1,7 @@
+@import "../../variables.scss";
+
 .Nav {
-  background-color: #4361ee;
+  background-color: $header;
   width: 70%;
   height: 100%;
   position: fixed;

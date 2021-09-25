@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .Crypto {
   width: 80%;
   margin: 0 auto;
@@ -10,8 +12,8 @@
       width: 220px;
       padding: 10px;
       border-radius: 5px;
-      outline-color: #4361ee;
-      border: 1px solid #4361ee;
+      outline-color: $hover;
+      border: 1px solid $primary;
     }
   }
 
@@ -32,13 +34,13 @@
     &--card {
       padding: 1rem;
       border-radius: 5px;
-      background-color: rgba($color: #4361ee, $alpha: 0.2);
+      background-color: white;
       box-shadow: 0px 10px 13px -7px #000000,
         -1px 11px 3px -5px rgba(0, 0, 0, 0.2);
 
       &--link {
         text-decoration: none;
-        color: #4361ee;
+        color: $header;
 
         &--container {
           &--header {
@@ -71,13 +73,13 @@
   &--card {
     padding: 1rem;
     border-radius: 5px;
-    background-color: rgba($color: #4361ee, $alpha: 0.2);
+    background-color: white;
     box-shadow: 0px 10px 13px -7px #000000,
       -1px 11px 3px -5px rgba(0, 0, 0, 0.2);
 
     &--link {
       text-decoration: none;
-      color: #4361ee;
+      color: $header;
 
       &--container {
         &--header {

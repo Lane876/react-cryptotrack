@@ -1,11 +1,18 @@
+@import "variables.scss";
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: $primary;
 }
 
 .App {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+.Navbar {
+  margin-bottom: 5rem;
 }

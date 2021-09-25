@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .Exchanges {
   width: 80%;
   margin: 0 auto;
@@ -6,11 +8,11 @@
     margin: 2rem 0px;
 
     &--container {
-      border: 1px solid rgb(171, 171, 171);
+      border: 1px solid $hover;
       border-radius: 5px;
       padding: 1rem;
       background-color: #fff;
-      margin-bottom: 1px;
+      margin-bottom: 5px;
       align-items: center;
       cursor: pointer;
 

@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .News {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -72,8 +74,8 @@
       width: 220px;
       padding: 10px;
       border-radius: 5px;
-      outline-color: #4361ee;
-      border: 1px solid #4361ee;
+      outline-color: $hover;
+      border: 1px solid $hover;
     }
   }
   .SNews {

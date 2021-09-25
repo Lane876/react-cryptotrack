@@ -1,5 +1,7 @@
+@import "../../variables.scss";
+
 .Footer {
-  background-color: #4361ee;
+  background-color: $header;
   padding: 1rem;
 
   .link {

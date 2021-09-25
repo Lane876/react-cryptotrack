@@ -1,6 +1,8 @@
+@import "../../variables.scss";
+
 .Loader {
   margin: 10% auto;
-  border: 5px solid #4361ee;
+  border: 5px solid $hover;
   border-top: 5px solid #fff;
   border-radius: 50%;
   width: 25px;
