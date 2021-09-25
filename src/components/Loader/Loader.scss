@@ -3,7 +3,7 @@
 .Loader {
   position: absolute;
   top: 30%;
-  left: 45%;
+  left: 50%;
   transform: translate(-50%, -50%);
   border: 5px solid $hover;
   border-top: 5px solid #fff;
@@ -11,6 +11,10 @@
   width: 25px;
   height: 25px;
   animation: spin 0.5s linear infinite;
+
+  @media (max-width: 800px) {
+    left: 48%;
+  }
 }
 @keyframes spin {
   0% {

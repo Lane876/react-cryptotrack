@@ -9,6 +9,7 @@ import "./SideMenu.scss";
 const SideMenu = () => {
   const [sidebar, setSidebar] = useState(false);
   const sidebarData = [
+    { title: "Home", path: "/", cName: "nav-text" },
     { title: "Cryptocurrencies", path: "/cryptocurrencies", cName: "nav-text" },
     { title: "Exchanges", path: "/exchanges", cName: "nav-text" },
     { title: "News", path: "/news", cName: "nav-text" },
