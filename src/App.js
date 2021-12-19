@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cryptocurrencies from "./components/Cryptocurrencies";
 import CryptoDetails from "./components/CryptoDetails";
 import Exchanges from "./components/Exchanges";
@@ -18,17 +18,13 @@ function App() {
           <Header />
         </div>
         <div className="Main">
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route
-              path="/cryptocurrencies"
-              exact
-              component={Cryptocurrencies}
-            />
-            <Route path="/exchanges" exact component={Exchanges} />
-            <Route path="/crypto/:coinId" exact component={CryptoDetails} />
-            <Route path="/news" exact component={News} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
+            <Route path="/exchanges" element={<Exchanges />} />
+            <Route path="/crypto/:coinId" element={<CryptoDetails />} />
+            <Route path="/news" element={<News />} />
+          </Routes>
         </div>
         <div className="Footer">
           <Footer />
