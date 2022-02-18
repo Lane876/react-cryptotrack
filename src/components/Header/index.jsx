@@ -28,9 +28,9 @@ const Header = () => {
               <Link to="/cryptocurrencies" className="link">
                 Cryptocurrencies
               </Link>
-              <Link to="/exchanges" className="link">
+              {/* <Link to="/exchanges" className="link">
                 Exchanges
-              </Link>
+              </Link> */}
               <Link to="/news" className="link">
                 News
               </Link>

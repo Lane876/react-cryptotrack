@@ -22,10 +22,12 @@ import LineChart from "../LineChart";
 import Loader from "../Loader";
 
 import "./CryptoDetails.scss";
+import { useEffect } from "react";
 
 const CryptoDetails = () => {
   const { coinId } = useParams();
   const [timeperiod, setTimeperiod] = useState("7d");
+
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
   const { data: coinHistory } = useGetCryptoHistoryQuery({
     coinId,
@@ -40,23 +42,25 @@ const CryptoDetails = () => {
   const stats = [
     {
       title: "Price to USD",
-      value: `$ ${cryptoDetails.price && millify(cryptoDetails.price)}`,
+      value: `$ ${cryptoDetails?.price && millify(cryptoDetails?.price)}`,
       icon: <AiOutlineDollarCircle />,
     },
     { title: "Rank", value: cryptoDetails.rank, icon: <AiOutlineNumber /> },
     {
       title: "24h Volume",
-      value: `$ ${cryptoDetails.volume && millify(cryptoDetails.volume)}`,
+      value: `$ ${cryptoDetails?.volume && millify(cryptoDetails?.volume)}`,
       icon: <AiOutlineThunderbolt />,
     },
     {
       title: "Market Cap",
-      value: `$ ${cryptoDetails.marketCap && millify(cryptoDetails.marketCap)}`,
+      value: `$ ${
+        cryptoDetails?.marketCap && millify(cryptoDetails?.marketCap)
+      }`,
       icon: <AiOutlineDollarCircle />,
     },
     {
       title: "All-time-high(daily avg.)",
-      value: `$ ${millify(cryptoDetails.allTimeHigh.price)}`,
+      value: `$ ${millify(cryptoDetails.allTimeHigh?.price)}`,
       icon: <AiOutlineTrophy />,
     },
   ];
@@ -74,7 +78,7 @@ const CryptoDetails = () => {
     },
     {
       title: "Aprroved Supply",
-      value: cryptoDetails.approvedSupply ? (
+      value: cryptoDetails.supply.confirmed ? (
         <AiOutlineCheckCircle />
       ) : (
         <AiOutlineStop />
@@ -83,12 +87,12 @@ const CryptoDetails = () => {
     },
     {
       title: "Total Supply",
-      value: `$ ${millify(cryptoDetails.totalSupply)}`,
+      value: `$ ${millify(cryptoDetails?.supply?.total)}`,
       icon: <AiOutlineExclamationCircle />,
     },
     {
       title: "Circulating Supply",
-      value: `$ ${millify(cryptoDetails.circulatingSupply)}`,
+      value: `$ ${millify(cryptoDetails?.supply?.circulating)}`,
       icon: <AiOutlineExclamationCircle />,
     },
   ];
@@ -116,7 +120,7 @@ const CryptoDetails = () => {
       </select>
       <LineChart
         coinHistory={coinHistory}
-        currentPrice={millify(cryptoDetails.price)}
+        currentPrice={millify(cryptoDetails?.price)}
         coinName={cryptoDetails.name}
       />
       <div className="CoinDetail__stats">

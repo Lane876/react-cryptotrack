@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cryptocurrencies from "./components/Cryptocurrencies";
 import CryptoDetails from "./components/CryptoDetails";
-import Exchanges from "./components/Exchanges";
+// import Exchanges from "./components/Exchanges";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HomePage from "./components/HomePage";
@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
-            <Route path="/exchanges" element={<Exchanges />} />
+            {/* <Route path="/exchanges" element={<Exchanges />} /> */}
             <Route path="/crypto/:coinId" element={<CryptoDetails />} />
             <Route path="/news" element={<News />} />
           </Routes>

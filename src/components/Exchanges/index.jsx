@@ -44,9 +44,9 @@ const Exchanges = () => {
                 <strong>{exchange.name}</strong>
               </div>
 
-              <div>24h Trade Volume: ${millify(exchange.volume)}</div>
-              <div>Markets: {millify(exchange.numberOfMarkets)}</div>
-              <div>Change: {millify(exchange.marketShare)}%</div>
+              <div>24h Trade Volume: ${millify(exchange?.volume)}</div>
+              <div>Markets: {millify(exchange?.numberOfMarkets)}</div>
+              <div>Change: {millify(exchange?.marketShare)}%</div>
             </div>
             <AnimatePresence>
               {isOpen && index === i && (

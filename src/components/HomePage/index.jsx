@@ -10,7 +10,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import "./HomePage.scss";
 
 const Homepage = () => {
-  const { data, isFetching } = useGetCryptosQuery(10);
+  const { data, isFetching } = useGetCryptosQuery(20);
 
   const globalStats = data?.data?.stats;
 
@@ -19,16 +19,20 @@ const Homepage = () => {
     <div className="HomePage">
       <h2 className="HomePage__crypto--heading">Global Crypto Stats</h2>
       <div className="HomePage__stats">
-        <div>Total Cryptocurrencies: {globalStats.total}</div>
-        <div>Total Exchanges: {millify(globalStats.totalExchanges)}</div>
-        <div>Total Market Cap: {`$${millify(globalStats.totalMarketCap)}`}</div>
-        <div>Total 24h Volume: {`$${millify(globalStats.total24hVolume)}`}</div>
-        <div>Total Markets: {millify(globalStats.totalMarkets)}</div>
+        <div>Total Cryptocurrencies: {globalStats?.total}</div>
+        <div>Total Exchanges: {millify(globalStats?.totalExchanges)}</div>
+        <div>
+          Total Market Cap: {`$ ${millify(globalStats?.totalMarketCap)}`}
+        </div>
+        <div>
+          Total 24h Volume: {`$ ${millify(globalStats?.total24hVolume)}`}
+        </div>
+        <div>Total Markets: {millify(globalStats?.totalMarkets)}</div>
       </div>
 
       <div className="HomePage__crypto">
         <h2 className="HomePage__crypto--heading">
-          Top 10 Cryptos In The World
+          Top 20 Cryptos In The World
         </h2>
         <Link
           to="/cryptocurrencies"

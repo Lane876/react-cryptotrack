@@ -7,7 +7,7 @@ import Loader from "../Loader";
 import "./Cryptocurrencies.scss";
 
 const Cryptocurrencies = ({ simplified }) => {
-  const count = simplified ? 10 : 100;
+  const count = simplified ? 20 : 100;
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,16 +34,20 @@ const Cryptocurrencies = ({ simplified }) => {
         </div>
       )}
       <div className="Currencies__container">
-        {cryptos?.map((currency) => (
-          <div className="Currencies__container--card" key={currency.id}>
+        {cryptos?.map((currency, i) => (
+          <div
+            className="Currencies__container--card"
+            key={currency.id}
+            key={i}
+          >
             <Link
               key={currency.id}
-              to={`/crypto/${currency.id}`}
+              to={`/crypto/${currency?.uuid}`}
               className="Currencies__container--card--link"
             >
               <div className="Currencies__container--card--link--container">
                 <div className="Currencies__container--card--link--container--header">
-                  <h4>{`${currency.rank}. ${currency.name}`}</h4>
+                  <h4>{`${currency?.rank}. ${currency?.name}`}</h4>
                   <img
                     className="crypto-image"
                     src={currency.iconUrl}
@@ -51,9 +55,9 @@ const Cryptocurrencies = ({ simplified }) => {
                     style={{ width: "40px", height: "40px" }}
                   />
                 </div>
-                <p>Price: {millify(currency.price)}</p>
-                <p>Market Cap: {millify(currency.marketCap)}</p>
-                <p>Daily Change: {currency.change}%</p>
+                <p>Price: {millify(currency?.price)}</p>
+                <p>Market Cap: {millify(currency?.marketCap)}</p>
+                <p>Daily Change: {currency?.change}%</p>
               </div>
             </Link>
           </div>
